@@ -1,9 +1,5 @@
 # Do LLMs Know When They're Wrong? Metacognition on Medical QA
 
-**Key finding:** _[pending: one sentence with a number, filled in after the runs]_
-
-![Risk-coverage curve](figures/risk_coverage.png)
-
 > This is a learning and portfolio project, **not a clinical tool**. Nothing here should be used for medical decisions.
 
 ## Question
@@ -17,7 +13,6 @@ A model can be well calibrated on average yet unable to tell its right answers f
 
 ## Setup
 - **Data:** 200 questions sampled (seed 42) from the test split of [MedQA-USMLE-4-options](https://huggingface.co/datasets/GBaker/MedQA-USMLE-4-options) (CC-BY-4.0), from Jin et al. (2020), *What Disease does this Patient Have? A Large-scale Open Domain Question Answering Dataset from Medical Exams* ([arXiv:2009.13081](https://arxiv.org/abs/2009.13081)).
-- **Models:** _[exact model names and dates run]_
 - **Conditions** (same 200 questions for each model):
 
 | Condition | How it works | Confidence comes from | Calls / question |
@@ -35,13 +30,8 @@ Prompts are identical across models and ask for JSON only (see [`src/conditions.
 - **Significance.** 95% bootstrap intervals (1,000 resamples) are reported for accuracy and AUROC, and comparisons between conditions and models use a paired bootstrap on the same questions ([`results/comparisons.csv`](results/comparisons.csv)).
 
 ## Results
-_[results table: `results/results_table.md`]_
-
-![Reliability diagram](figures/reliability_diagram.png)
-![Confidence by correctness](figures/confidence_by_correctness.png)
 
 ## What I learned
-_[2-4 sentences in your own words]_
 
 ## Limitations
 - 200 questions: small differences may not be significant
@@ -51,7 +41,6 @@ _[2-4 sentences in your own words]_
 - Not a clinical tool; for research and learning only
 
 ## Next steps
-_[e.g. a human study: does showing AI confidence change how people decide?]_
 
 ## Run it
 ```bash
